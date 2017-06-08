@@ -1,0 +1,3 @@
+rootProject.name = 'ReactNativeMovieViewer'
+
+include ':app'
