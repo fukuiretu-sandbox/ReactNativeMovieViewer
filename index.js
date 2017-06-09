@@ -35,7 +35,25 @@ export default class ReactNativeMovieViewer extends Component {
   }
 
   componentDidMount = () => {
-    this.fetchData();
+    // this.fetchData();
+    this.setState({
+      dataSource: this.ds.cloneWithRows(
+        [
+          {
+            id: 1,
+            backdrop_path: 'hoge.png',
+            title: 'abcde',
+            release_date: '2017-06-01'
+          },
+          {
+            id: 2,
+            backdrop_path: 'hoge.png',
+            title: 'bbbbbbbbbbb',
+            release_date: '2017-06-02'
+          }
+        ]
+      ),
+    })
   }
 
   renderScene = (route, navigator) => {
